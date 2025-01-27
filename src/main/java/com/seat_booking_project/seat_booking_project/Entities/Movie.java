@@ -3,6 +3,7 @@ package com.seat_booking_project.seat_booking_project.Entities;
 import jakarta.persistence.*;
 import lombok.Getter;
 
+import java.time.LocalDateTime;
 
 
 @Entity
@@ -30,12 +31,44 @@ public class Movie {
     private String language;
 
     @Column(name = "duration")
-    private String duration;
+    private LocalDateTime duration;
 
     @Column(name = "ratings")
     private double ratings;
 
     // Getters and Setters
+
+    public int getMovieId() {
+        return movieId;
+    }
+
+    public String getMovieName() {
+        return movieName;
+    }
+
+    public String getCast() {
+        return cast;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public String getAgeRating() {
+        return ageRating;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public LocalDateTime getDuration() {
+        return duration;
+    }
+
+    public double getRatings() {
+        return ratings;
+    }
 
     public void setMovieId(int movieId) {
         this.movieId = movieId;
@@ -61,7 +94,7 @@ public class Movie {
         this.language = language;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(LocalDateTime duration) {
         this.duration = duration;
     }
 
