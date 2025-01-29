@@ -1,9 +1,11 @@
 package com.seat_booking_project.seat_booking_project.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "theater")
 public class Theater {
 
