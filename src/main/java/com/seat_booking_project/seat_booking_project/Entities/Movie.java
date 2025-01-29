@@ -10,7 +10,6 @@ import lombok.Getter;
 public class Movie {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "movie_ID")
     private int movieId;
 
@@ -36,6 +35,38 @@ public class Movie {
     private double ratings;
 
     // Getters and Setters
+
+    public int getMovieId() {
+        return movieId;
+    }
+
+    public String getMovieName() {
+        return movieName;
+    }
+
+    public String getCast() {
+        return cast;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public String getAgeRating() {
+        return ageRating;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public double getRatings() {
+        return ratings;
+    }
 
     public void setMovieId(int movieId) {
         this.movieId = movieId;
